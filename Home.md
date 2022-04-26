@@ -42,10 +42,12 @@ yum module enable idm:DL1
 yum module install idm:DL1/dns
 ipa-server-install 
 
-systemctl stop firewalld
-systemctl disable firewalld
-kinit admin
-klist 
+ systemctl stop firewalld
+
+ systemctl disable firewalld
+ kinit admin
+ klist 
+
 --------------------------------------------------------------------  
 less /var/log/ipaserver-install.log
  systemctl start ipa.service
