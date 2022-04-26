@@ -40,12 +40,15 @@ yum module enable idm:DL1
  
  // yum module install idm:DL1/server
 yum module install idm:DL1/dns
+
 ipa-server-install 
 
  systemctl stop firewalld
 
  systemctl disable firewalld
+
  kinit admin
+
  klist 
 
 --------------------------------------------------------------------  
