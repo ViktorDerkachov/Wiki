@@ -18,6 +18,7 @@ yum install net-tools
 // yum -y install epel-release
 
 localectl set-locale LANG=en_US.UTF-8
+
 yum install langpacks-en glibc-all-langpacks
    
 yum update -y
@@ -25,12 +26,19 @@ yum update -y
 [Configure the time for EC2 instances with IPv4 addresses](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/set-time.html)
 
 less /etc/chrony.conf
+
 systemctl status chronyd
+
 vi  /etc/chrony.conf
+
+`server 169.254.169.123 prefer iburst minpoll 4 maxpoll 4`
+
 service chronyd restart
+
 systemctl restart chronyd
   
 systemctl status chronyd
+
 chronyc sources -v
   
 hostnamectl set-hostname ipa2.tuton.cf
