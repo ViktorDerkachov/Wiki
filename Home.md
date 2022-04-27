@@ -119,3 +119,9 @@ That done the job for me too.
 https://pagure.io/freeipa/issue/9041
 
 
+ `ipa-client-install --hostname=`hostname -f` \`
+`--mkhomedir \`
+`--server=ipa.computingforgeeks.com \`
+`--domain computingforgeeks.com \`
+`--realm COMPUTINGFORGEEKS.COM`
+
