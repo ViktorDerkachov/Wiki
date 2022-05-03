@@ -71,3 +71,81 @@ Therefore I propose closing this ticket and, if necessary, updating
 guides and documentation that refer to getcert '-U' option to indicate
 that this is not the intended way to get a particular EKU with FreeIPA.
 
+--------------------------------------------
+
+" Dogtag Certificate System":https://www.dogtagpki.org/wiki/PKI_Main_Page
+
+--------------------------------------------
+
+
+
+[root@ipa2 profiles]# pwd
+/usr/share/ipa/profiles
+[root@ipa2 profiles]# ll
+total 44
+-rw-r--r--. 1 root root 6707 июн 29  2021 acmeIPAServerCert.cfg
+-rw-r--r--. 1 root root 7294 июн 29  2021 caIPAserviceCert.cfg
+-rw-r--r--. 1 root root 7014 июн 29  2021 caIPAserviceCert.UPGRADE.cfg
+-rw-r--r--. 1 root root 7330 июн 29  2021 IECUserRoles.cfg
+-rw-r--r--. 1 root root 7261 июн 29  2021 KDCs_PKINIT_Certs.cfg
+-rw-r--r--. 1 root root  817 июн 29  2021 README
+
+root@ipa2 profiles]# cat README 
+This directory contains profile TEMPLATES for certificate profiles
+included in FreeIPA.  Do not import these files or modifications
+thereof - it is likely that Dogtag will accept the configuration,
+but certificate issuance will fail with the updated configuration.
+At best, it will not give you the certificates you want.
+
+If you want to modify a profile configuration or create a new
+profile based on an existing profile configuration, you should
+export the current profile configuration with the command:
+
+    ipa certprofile-show --out FILENAME PROFILE_NAME
+
+After modifying the configuration, update the profile configuration:
+
+    ipa certprofile-mod --file FILENAME PROFILE_NAME
+
+Or if you are creating a new profile:
+
+    ipa certprofile-import --desc DESC --store 1 \
+        --file FILENAME NEW_PROFILE_NAME
+
+"Internet X.509 Public Key Infrastructure Certificate  and Certificate Revocation List (CRL) Profile":https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12
+
+The following key usage purposes are defined:
+
+   anyExtendedKeyUsage OBJECT IDENTIFIER ::= { id-ce-extKeyUsage 0 }
+
+   id-kp OBJECT IDENTIFIER ::= { id-pkix 3 }
+
+   id-kp-serverAuth             OBJECT IDENTIFIER ::= { id-kp 1 }
+   -- TLS WWW server authentication
+   -- Key usage bits that may be consistent: digitalSignature,
+   -- keyEncipherment or keyAgreement
+
+   id-kp-clientAuth             OBJECT IDENTIFIER ::= { id-kp 2 }
+   -- TLS WWW client authentication
+   -- Key usage bits that may be consistent: digitalSignature
+   -- and/or keyAgreement
+
+   id-kp-codeSigning             OBJECT IDENTIFIER ::= { id-kp 3 }
+   -- Signing of downloadable executable code
+   -- Key usage bits that may be consistent: digitalSignature
+
+   id-kp-emailProtection         OBJECT IDENTIFIER ::= { id-kp 4 }
+   -- Email protection
+   -- Key usage bits that may be consistent: digitalSignature,
+   -- nonRepudiation, and/or (keyEncipherment or keyAgreement)
+
+   id-kp-timeStamping            OBJECT IDENTIFIER ::= { id-kp 8 }
+   -- Binding the hash of an object to a time
+   -- Key usage bits that may be consistent: digitalSignature
+   -- and/or nonRepudiation
+
+   id-kp-OCSPSigning            OBJECT IDENTIFIER ::= { id-kp 9 }
+   -- Signing OCSP responses
+   -- Key usage bits that may be consistent: digitalSignature
+   -- and/or nonRepudiation
+
