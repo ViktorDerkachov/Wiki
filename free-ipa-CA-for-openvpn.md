@@ -1,4 +1,50 @@
 
+[[Freeipa-users] Openvpn and Certificates](https://freeipa-users.redhat.narkive.com/kf51FYgc/openvpn-and-certificates)
+
+`I understand from previous discussions that client certificates are not yet`
+`supported in FreeIPA, instead I understand one can use "service`
+`certificates". From an OpenVPN standpoint I'm guessing this is fine because`
+`a vpn client can be entered in Freeipa as a client and a certificate`
+`generated for it. This might actually be a preferred model for VPN.`
+
+`My OVPN server config looks like this:`
+`ca ca.crt`
+`cert server.crt`
+`key server.key`
+`# Diffie hellman parameters.`
+`dh dh2048.pem`
+
+`I guess I can use the`
+`"ipa-getcert request -f /path/to/server.crt -k /path/to/private.key -r"`
+`command to generate the server.crt and private.key and I know where to find`
+`ca.crt however:`
+`- How about the Diffie hellman parameters?`
+`- Is dh2048.pem just a bunch of shared primes that enable the two parties`
+`to establish encryption together?`
+`- Is it bad If this file is compromised?`
+
+` **in the docs** of optionally requiring that a peer`
+`certificate include a particular value in its **nsCertType extension**`
+`(support for that's not currently planned AFAIK), or a particular value`
+`in its **extendedKeyUsage (EKU)** extension (there's a ticket [1] for`
+`supporting that), but you're not setting such a requirement above.`
+
+`ipa service-add-host --hosts ipa.domain.de client/andrews-macbook-air.local.domain.de`
+
+`ipa-getcert request -f`
+`/var/lib/certmonger/requests/Andrews-MacBook-Air.local.crt -k`
+`/var/lib/certmonger/requests/Andrews-MacBook-Air.local.key -N CN=`
+`andrews-macbook-air.local.domain.de -D andrews-macbook-air.local.domain.de`
+`-K client/andrews-macbook-***@DOMAIN.DE`
+
+`-- Then shuffle the keys and certs around --`
+
+`-- Restart OpenVPN --`
+
+`And et voila! It works! Although it does feel a bit hacky :)`
+
+
+
 [ipa-getcert does not allow setting specific EKU on certificates](https://pagure.io/freeipa/issue/2915)
 
 Using **ipa-getcert -U id-kp-serverAuth** as shown in documentation, the certificate is created with **EKU** for both "TLS Web Server Authentication" and "TLS Web Client Authentication".
