@@ -77,6 +77,7 @@ that this is not the intended way to get a particular EKU with FreeIPA.
 
 --------------------------------------------
 
+"ipa certs":https://frasertweedale.github.io/blog-redhat/posts/2015-08-06-freeipa-custom-certprofile.html
 
 
 [root@ipa2 profiles]# pwd
@@ -148,4 +149,26 @@ The following key usage purposes are defined:
    -- Signing OCSP responses
    -- Key usage bits that may be consistent: digitalSignature
    -- and/or nonRepudiation
+
+policyset.serverCertSet.7.default.params.exKeyUsageOIDs=1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2
+
+
+2.16.840.1.113730.1.1 - Netscape certificate type
+
+(so it's -- TLS WWW client authentication)
+profileId=OpenVPNUserCert
+  Netscape Cert Type: 
+                SSL Client
+
+
+[root@ipa2 ipa-prifiles]# ipa certprofile-import OpenVPNUserCert --file=OpenVPNUserCert.cfg --store=TRUE --desc="OpenVPN client enrollment profile"
+----------------------------------
+Imported profile "OpenVPNUserCert"
+----------------------------------
+  Profile ID: OpenVPNUserCert
+  Profile description: OpenVPN client enrollment profile
+  Store issued certificates: TRUE
+
+
+
 
