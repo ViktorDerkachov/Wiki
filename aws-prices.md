@@ -1,6 +1,7 @@
 [AWS VPN pricing](https://aws.amazon.com/vpn/pricing/)
 
-$0.05 per Site-to-Site VPN connection per hour
+**0.05 per Site-to-Site VPN connection per hour**
+
 Data transfer out on AWS Site-to-Site VPN incurs data transfer out charges that are explained in the EC2 on-demand pricing page.
 [Data Transfer](https://aws.amazon.com/ec2/pricing/on-demand/)
 
