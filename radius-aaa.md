@@ -46,3 +46,10 @@ If you were using RADIUS to authenticate users, then your PAM config might look 
 **alternative someone's plugin**
 [openvpn-auth-radius](https://github.com/brainly/openvpn-auth-radius)
 
+--------------------------
+
+yum install pam_radius
+
+Installed:
+  pam_radius-1.4.0-15.el8.x86_64
+
