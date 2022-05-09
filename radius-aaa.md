@@ -149,3 +149,6 @@ FreeRADIUS (standalone, full version)
 Active Directory
 
 
+systemctl start rublon
+
+systemctl start openvpn-server@server.service
