@@ -15,4 +15,21 @@ Edit the pam_radius_auth configuration file and add a line that represents your 
 
 server[:port] shared_secret [timeout]
 
+[OpenVPN steps to configure only username/password authentication](https://serverfault.com/questions/751700/openvpn-steps-to-configure-only-username-password-authentication)
+
+`username-as-common-name`
+`client-cert-not-required`
+
+`plugin /usr/lib64/openvpn/plugins/openvpn-plugin-auth-pam.so openvpn`
+
+You would also need to create a PAM config for **openvpn** (e.g. /etc/pam.d/openvpn).
+
+If you were using RADIUS to authenticate users, then your PAM config might look like:
+
+`account         required        pam_radius_auth.so`
+`account         required        pam_radius_auth.so`
+`auth            required        pam_radius_auth.so no_warn try_first_pass`
+
+
+
 
