@@ -76,3 +76,9 @@ cat /etc/pam_radius.conf
 
 **wget https://rublon.com/download/rublonauthproxy-latest.tgz  --no-check-certificate**
 
+tar -xzvf rublonauthproxy-latest.tgz ./rublonauthproxy/
+make
+cp  rublon.service /lib/systemd/system
+cp examples/config.min.example.json config.json
+
+yum install openldap-clients
