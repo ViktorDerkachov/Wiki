@@ -77,37 +77,75 @@ cat /etc/pam_radius.conf
 **wget https://rublon.com/download/rublonauthproxy-latest.tgz  --no-check-certificate**
 
 tar -xzvf rublonauthproxy-latest.tgz ./rublonauthproxy/
+
 make
+
 cp  rublon.service /lib/systemd/system
+
 cp examples/config.min.example.json config.json
 
 yum install openldap-clients
+
 ldapsearch -h 172.30.0.10 -b dc=tuton,dc=cf -D uid=ovpn,cn=users,cn=accounts,dc=tuton,dc=cf -w secret
 
 
 [root@ov config]# cat /usr/local/src/rublonauthproxy/config/config.json
+
 {
+
   "PROXY": {
+
     "RADIUS_SECRET": "secret",
+
     "RUBLON_API": "https://core.rublon.net",
+
     "SERVERS": [
+
       {
+
         "IP": "0.0.0.0",
+
         "PORT": 1812,
+
         "MODE": "standard",
+
         "AUTH_SOURCE": "LDAP",
+
         "RUBLON_TOKEN": "ABF8D57AFA7A44F49143E61AC2823D6F",
+
         "RUBLON_SECRET": "4d2b4d4d90fe7024803702aee1ac07",
+
         "AUTH_METHOD": "push"
+
       }
+
     ]
+
   },
+
   "LDAP": {
+
     "HOST": "172.30.0.10",
+
     "SEARCH_DN": "dc=tuton,dc=cf",
+
     "USERNAME_ATTRIBUTE": "uid",
+
     "ACCESS_USER_DN": "uid=ovpn,cn=users,cn=accounts,dc=tuton,dc=cf",
+
     "ACCESS_USER_PASSWORD": "secret"
+
   }
+
+[Rublon Authentication Proxy](https://rublon.com/doc/rap/)
+List of tested and verified IdPs:
+
+OpenLDAP 
+
+FreeIPA
+
+FreeRADIUS (standalone, full version)
+
+Active Directory
 
 
