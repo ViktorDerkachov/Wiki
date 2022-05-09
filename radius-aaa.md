@@ -26,8 +26,11 @@ You would also need to create a PAM config for **openvpn** (e.g. /etc/pam.d/open
 
 If you were using RADIUS to authenticate users, then your PAM config might look like:
 
+
 `account         required        pam_radius_auth.so`
+
 `account         required        pam_radius_auth.so`
+
 `auth            required        pam_radius_auth.so no_warn try_first_pass`
 
 
