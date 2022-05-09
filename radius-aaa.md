@@ -74,5 +74,5 @@ cat /etc/pam_radius.conf
 `193.227.119.6:1812 secret 10`
 
 
-`**wget https://rublon.com/download/rublonauthproxy-latest.tgz  --no-check-certificate  **`
+**wget https://rublon.com/download/rublonauthproxy-latest.tgz  --no-check-certificate**
 
