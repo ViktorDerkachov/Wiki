@@ -66,3 +66,10 @@ ovpn server.conf
 `account required pam_radius_auth.so`
 
 `password required pam_radius_auth.so` 
+
+cat /etc/pam_radius.conf 
+
+`# server[:port]	shared_secret      timeout (s)`
+
+`193.227.119.6:1812 secret 10`
+
