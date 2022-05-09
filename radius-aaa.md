@@ -41,5 +41,8 @@ If you were using RADIUS to authenticate users, then your PAM config might look 
 `auth            required        pam_radius_auth.so no_warn try_first_pass`
 
 
+[2x HOW TO Introduction](https://openvpn.net/community-resources/how-to/)
 
+**alternative someone's plugin**
+[openvpn-auth-radius](https://github.com/brainly/openvpn-auth-radius)
 
