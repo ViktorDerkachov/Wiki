@@ -56,13 +56,13 @@ Installed:
 less /usr/share/doc/pam_radius/USAGE
 
 ovpn server.conf
-plugin /usr/lib64/openvpn/plugins/openvpn-plugin-auth-pam.so opvpn-radius
+`plugin /usr/lib64/openvpn/plugins/openvpn-plugin-auth-pam.so opvpn-radius`
 
 
 [root@ov server]# cat /etc/pam.d/opvpn-radius
 
-auth required pam_radius_auth.so 
+`auth required pam_radius_auth.so `
 
-account required pam_radius_auth.so
+`account required pam_radius_auth.so`
 
-password required pam_radius_auth.so 
+`password required pam_radius_auth.so` 
