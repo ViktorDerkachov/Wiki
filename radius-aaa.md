@@ -53,3 +53,5 @@ yum install pam_radius
 Installed:
   pam_radius-1.4.0-15.el8.x86_64
 
+less /usr/share/doc/pam_radius/USAGE
+
