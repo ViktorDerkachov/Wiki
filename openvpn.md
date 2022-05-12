@@ -89,26 +89,41 @@ https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html
 
 **# auth-user-pass-verify**
 
-script-security 2
-auth-user-pass-verify /etc/openvpn/server/envprinter via-env
+`script-security 2`
 
-# does not work with uncommented
-_#user nobody_
-_#group nobody_
+`auth-user-pass-verify /etc/openvpn/server/envprinter via-env`
+
+`# does not work with uncommented`
+
+`_#user nobody_`
+
+`_#group nobody_`
 
 cat **envprinter **
-#!/bin/bash
-echo "common name is: ${common_name}"
-echo "username is: ${username}"
-set
-exit 0
+
+`#!/bin/bash`
+
+`echo "common name is: ${common_name}"`
+
+`echo "username is: ${username}"`
+
+`set`
+
+`exit 0`
+
 
 log from server
+
 `common name is: yaruser`
+
 `username is: `
+
 `_='username is: '`
+
 `common_name=yaruser`
+
 `config=server.conf`
+
 `daemon=0`
 `daemon_log_redirect=1`
 `daemon_pid=3533`
