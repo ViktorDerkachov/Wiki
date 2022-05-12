@@ -162,7 +162,9 @@ log from server
 
 **Интересные параметры:**
 
---push-peer-info
+--push-peer-info  на стороне клиента
+            peer info: IV_HWADDR=10:51:07:60:43:f2   
+            peer info: IV_PLAT=linux
 --duplicate-cn
               Allow  multiple  clients with the same common name to concurrently connect.  In the absence of this option,
               OpenVPN will disconnect a client instance upon connection of a new client having the same common name.
