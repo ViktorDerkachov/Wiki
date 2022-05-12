@@ -84,3 +84,65 @@ https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html
 
 [Configure OpenVPN to block clients by OS?](https://serverfault.com/questions/834826/configure-openvpn-to-block-clients-by-os)
 
+
+## Особенности конфигурирования openvpn 
+
+**# auth-user-pass-verify**
+
+script-security 2
+auth-user-pass-verify /etc/openvpn/server/envprinter via-env
+
+# does not work with uncommented
+_#user nobody_
+_#group nobody_
+
+cat **envprinter **
+#!/bin/bash
+echo "common name is: ${common_name}"
+echo "username is: ${username}"
+set
+exit 0
+
+log from server
+`common name is: yaruser`
+`username is: `
+`_='username is: '`
+`common_name=yaruser`
+`config=server.conf`
+`daemon=0`
+`daemon_log_redirect=1`
+`daemon_pid=3533`
+`daemon_start_time=1652358974`
+`dev=tun0`
+`dev_type=tun`
+`ifconfig_local=172.28.0.1`
+`ifconfig_remote=172.28.0.2`
+`link_mtu=1621`
+`local_port_1=1194`
+`proto_1=udp`
+`redirect_gateway=0`
+`remote_port_1=1194`
+`route_gateway_1=172.28.0.2`
+`route_net_gateway=172.31.0.1`
+`route_netmask_1=255.255.255.0`
+`route_network_1=172.28.0.0`
+`route_vpn_gateway=172.28.0.2`
+`script_context=init`
+`script_type=user-pass-verify`
+`tls_digest_0=37:17:48:ce:f3:fe:64:ee:fa:4d:f8:e4:01:45:a3:e0:8b:bf:49:42`
+`tls_digest_1=43:53:a6:37:c9:9a:02:0c:30:de:4c:80:37:b0:78:7b:e7:1a:90:51`
+`tls_digest_sha256_0=aa:16:2b:40:9a:f7:ab:3a:6e:69:7c:18:46:a3:19:84:67:25:98:58:eb:c9:20:5d:97:24:32:2f:93:bb:f8:17`
+`tls_digest_sha256_1=8e:95:43:b2:84:ac:36:13:ec:d1:ec:aa:68:e4:18:3e:9f:6a:99:ca:81:07:fc:ed:e2:e7:b3:6f:0f:ae:22:1c`
+`tls_id_0='O=TUTON.CF, CN=yaruser'`
+`tls_id_1='O=TUTON.CF, CN=Certificate Authority'`
+`tls_serial_0=19`
+`tls_serial_1=1`
+`tls_serial_hex_0=13`
+`tls_serial_hex_1=01`
+`tun_mtu=1500`
+`untrusted_ip=91.203.114.1`
+`untrusted_port=43832`
+`username=`
+`verb=4`
+
+
