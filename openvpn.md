@@ -160,4 +160,34 @@ log from server
 `username=`
 `verb=4`
 
+**Интересные параметры:**
+
+--push-peer-info
+--duplicate-cn
+              Allow  multiple  clients with the same common name to concurrently connect.  In the absence of this option,
+              OpenVPN will disconnect a client instance upon connection of a new client having the same common name.
+--auth --tls-verify cmd
+              Run  command  cmd  to  verify the X509 name of a pending TLS connection that has otherwise passed all other
+              tests of certification (except for revocation via --crl-verify directive; the revocation test occurs  after
+ --x509-username-field [ext:]fieldname
+              Field  in the X.509 certificate subject to be used as the username (default=CN).  Typically, this option is
+              specified with fieldname as either of the following:
+
+              --x509-username-field emailAddress
+              --x509-username-field ext:subjectAltName
+            the --tls-verify test).-user-pass-verify cmd method
+ --x509-track attribute
+              Save  peer  X509 attribute value in environment for use by plugins and management interface.  Prepend a '+'
+              to   attribute   to   save   values   from   full   cert   chain.     Values    will    be    encoded    as
+              X509_<depth>_<attribute>=<value>.    Multiple  --x509-track  options  can  be  defined  to  track  multiple
+              attributes.
+ --remote-cert-tls client|server
+ --remote-cert-eku oid
+              Require that peer certificate was signed with an explicit extended key usage.
+ --crl-verify crl ['dir']
+              Check peer certificate against the file crl in PEM format
+
+
+
+
 
