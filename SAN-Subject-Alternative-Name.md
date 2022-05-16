@@ -88,3 +88,6 @@ So, in my test example, I have
 policyset.otherCertSet.10.default.params.userExtOID=2.5.29.17
 which is already limiting the allowed user supplied OID to be SAN.
 However, to further setting constraint for the actual content of the SAN, you will need to write a constraint plugin as I suggested earlier.
+
+
+[OpenSSL CSR with Alternative Names one-line](https://www.endpointdev.com/blog/2014/10/openssl-csr-with-alternative-names-one/)
