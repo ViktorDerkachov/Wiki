@@ -7,3 +7,6 @@ Several OpenSSL commands can add extensions to a certificate or certificate requ
 
 
 [Manually Generate a Certificate Signing Request (CSR) Using OpenSSL](https://www.ssl.com/how-to/manually-generate-a-certificate-signing-request-csr-using-openssl/)
+
+Manipulating ssl certificates
+[Manipulating ssl certificates](https://bgstack15.wordpress.com/2016/06/30/manipulating-ssl-certificates/)
