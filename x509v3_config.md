@@ -8,5 +8,22 @@ Several OpenSSL commands can add extensions to a certificate or certificate requ
 
 [Manually Generate a Certificate Signing Request (CSR) Using OpenSSL](https://www.ssl.com/how-to/manually-generate-a-certificate-signing-request-csr-using-openssl/)
 
-Manipulating ssl certificates
+# Manipulating ssl certificates
+
 [Manipulating ssl certificates](https://bgstack15.wordpress.com/2016/06/30/manipulating-ssl-certificates/)
+
+`Testing ssl cert from server`
+
+`To find out if the https or other ssl-enabled service is serving the right certificate, you can use openssl as a client and pull down the ssl `
+`cert.`
+
+`printf '\n' | openssl s_client -connect ipa.example.com:443`
+
+`And observe the output for the certificate information.`
+
+`To test SNI, add the parameter -servername myurl.example.com.`
+
+`Reference: weblink 6 https://major.io/2012/02/07/using-openssls-s_client-command-with-web-servers-using-server-name-indication-sni/`
+
+
+
