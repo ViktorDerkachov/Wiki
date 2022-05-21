@@ -31,6 +31,32 @@ How to Create OpenLDAP Member Groups
 [Настройка сервиса OpenVPN + LDAP аутентификация](https://habr.com/ru/company/icl_services/blog/301554/)
 
 
+-------------------------
+[root@ovpn2 server]# yum install  openvpn-auth-ldap
+
+-rwxr-xr-x. 1 root root 157880 окт 15  2021 /usr/lib64/openvpn/plugins/openvpn-auth-ldap.so
+
+-rwxr-xr-x. 1 root root  16352 мар 25 22:53 /usr/lib64/openvpn/plugins/openvpn-plugin-auth-pam.so
+
+-rwxr-xr-x. 1 root root  15848 мар 25 22:53 /usr/lib64/openvpn/plugins/openvpn-plugin-down-root.so
+
+[root@ovpn2 server]# cp  /etc/openvpn/auth/ldap.conf /etc/openvpn/auth/ldap.conf.old
+
+
+[root@ovpn2 server]# cat /etc/pam.d/openvpn
+
+#%PAM-1.0
+**auth        sufficient pam_permit.so**
+
+**account    include      system-auth**
+
+
+
+
+-------------------------
+
+
+
 # Instlallation OPENVPN
 
 from here
