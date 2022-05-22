@@ -1,3 +1,5 @@
+[ Alexander Bokovoy](https://github.com/abbra)
+
 # IDVIEW
 [Using an ID view](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_identity_management/using-an-id-view-to-override-a-user-attribute-value-on-an-idm-client_configuring-and-managing-idm)
 
@@ -19,3 +21,5 @@
 [Extending FreeIPA LDAP schema and UI (By example for Owncloud/Nextcloud)](https://github.com/radiorabe/freeipa-extending-ldap-schema-and-ui)
 
 [Extending FreeIPA](https://abbra.fedorapeople.org/freeipa-extensibility.html#sec-6)
+
+[A user status plugin example for freeIPA](https://github.com/abbra/freeipa-userstatus-plugin)
