@@ -10,7 +10,7 @@
 [Logging](https://linuxguideandhints.com/el/freeipa.html#logging)
 
 
-Extending FreeIPA
+# Extending FreeIPA
 
 [Extending the FreeIPA Server](https://www.freeipa.org/images/5/5b/FreeIPA33-extending-freeipa.pdf)
 
