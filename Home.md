@@ -125,3 +125,12 @@ https://pagure.io/freeipa/issue/9041
 `--domain computingforgeeks.com \`
 `--realm COMPUTINGFORGEEKS.COM`
 
+
+# OCSP check
+
+openssl ocsp -CA ./ca.pem -issuer ./ca.pem  -nonce -serial 27  -url  http://ipa-ca.tuton.cf/ca/ocsp
+
+[OCSP_check.sh](https://github.com/OpenVPN/openvpn/blob/master/contrib/OCSP_check/OCSP_check.sh)
+
+[Signer certificate for OCSP responder](https://forums.openvpn.net/viewtopic.php?t=25307)
+
