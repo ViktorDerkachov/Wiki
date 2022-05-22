@@ -217,5 +217,6 @@ log from server
 
 
 
+# Management Interface
 
-
+[Management Interface](https://openvpn.net/community-resources/management-interface/)
