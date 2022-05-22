@@ -5,7 +5,17 @@
 
 [V4/Migrating existing environments to Trust](https://www.freeipa.org/page/V4/Migrating_existing_environments_to_Trust)
 
-# Logging
-# Audit Logs
+# Logging Audit Logs
 
 [Logging](https://linuxguideandhints.com/el/freeipa.html#logging)
+
+
+Extending FreeIPA
+
+[Extending the FreeIPA Server](https://www.freeipa.org/images/5/5b/FreeIPA33-extending-freeipa.pdf)
+
+[FreeIPA33-extending-freeipa.pdf](https://github.com/yar145/freeipa/files/8749456/FreeIPA33-extending-freeipa.pdf)
+
+[Extending FreeIPA LDAP schema and UI (By example for Owncloud/Nextcloud)](https://github.com/radiorabe/freeipa-extending-ldap-schema-and-ui)
+
+[Extending FreeIPA](https://abbra.fedorapeople.org/freeipa-extensibility.html#sec-6)
