@@ -1,5 +1,8 @@
 [ Alexander Bokovoy](https://github.com/abbra)
 
+# freeipa-workshop
+[freeipa-workshop](https://github.com/abbra/freeipa-workshop)
+
 # IDVIEW
 [Using an ID view](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_identity_management/using-an-id-view-to-override-a-user-attribute-value-on-an-idm-client_configuring-and-managing-idm)
 
@@ -23,3 +26,5 @@
 [Extending FreeIPA](https://abbra.fedorapeople.org/freeipa-extensibility.html#sec-6)
 
 [A user status plugin example for freeIPA](https://github.com/abbra/freeipa-userstatus-plugin)
+
+[V3/WebUI plugins](https://www.freeipa.org/page/V3/WebUI_plugins)
