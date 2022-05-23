@@ -32,3 +32,9 @@
 **app.js**
 
 [root@ipa2 ~]# cd /usr/share/ipa/ui/js/freeipa/
+
+less /usr/lib/python3.6/site-packages/asn1crypto/x509.py
+
+dn_qualifier
+
+
