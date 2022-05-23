@@ -28,3 +28,7 @@
 [A user status plugin example for freeIPA](https://github.com/abbra/freeipa-userstatus-plugin)
 
 [V3/WebUI plugins](https://www.freeipa.org/page/V3/WebUI_plugins)
+
+**app.js**
+
+[root@ipa2 ~]# cd /usr/share/ipa/ui/js/freeipa/
