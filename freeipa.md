@@ -71,3 +71,11 @@ dn_qualifier
 
 
 
+## FeeIPA migration
+[V4/FreeIPA to FreeIPA Migration](https://www.freeipa.org/page/V4/FreeIPA_to_FreeIPA_Migration)
+
+[[Freeipa-users] export users/groups from one ipa server to another](https://listman.redhat.com/archives/freeipa-users/2014-January/010658.html)
+
+ipa migrate-ds --user-container=cn=users,cn=accounts --group-container=cn=groups,cn=accounts --with-compat ldap://dr-ipa.mydomain.com:389
+
+
