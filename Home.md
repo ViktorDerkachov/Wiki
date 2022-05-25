@@ -128,6 +128,59 @@ https://pagure.io/freeipa/issue/9041
 `--realm COMPUTINGFORGEEKS.COM`
 
 
+## Ubuntu 20.04 client installation
+
+[Configure FreeIPA Client on Ubuntu 20.04|18.04 / CentOS 7](https://computingforgeeks.com/how-to-configure-freeipa-client-on-ubuntu-centos/)
+
+hostnamectl set-hostname y-jenkins.hopto.org
+
+vi /etc/hosts
+
+`172.31.37.252	y-jenkins.hopto.org`
+
+vi /etc/systemd/resolved.conf 
+
+`[Resolve]`
+
+`DNS=172.30.0.10`
+
+`Domains=~tuton.cf ~buton.cf tuton.cf`
+
+`FallbackDNS=8.8.8.8 8.8.4.4 1.1.1.1 1.0.0.1`
+
+
+
+yum -y update
+
+apt-get install freeipa-client
+
+apt install chrony
+less /etc/chrony/chrony.conf
+
+vi /etc/chrony/chrony.conf    add: server 169.254.169.123 prefer iburst minpoll 4 maxpoll 4
+
+/etc/init.d/chrony restart
+
+ipa-client-install 
+
+kinit admin
+
+
+vi  /usr/share/pam-configs/mkhomedir
+
+`Name: activate mkhomedir`
+
+`Default: yes`
+
+`Priority: 900`
+
+`Session-Type: Additional`
+
+`Session:`
+
+`required pam_mkhomedir.so umask=0022 skel=/etc/skel`
+
+
 # OCSP check
 
 openssl ocsp -CA ./ca.pem -issuer ./ca.pem  -nonce -serial 27  -url  http://ipa-ca.tuton.cf/ca/ocsp
