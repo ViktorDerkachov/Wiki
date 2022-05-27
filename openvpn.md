@@ -287,7 +287,7 @@ root@ovpn2 client: cat up-actions
 #!/bin/sh
 /bin/sudo /sbin/iptables -t nat -A POSTROUTING -o $1 -j MASQUERADE
 
-# publish some server
+#publish some server
 
 /bin/sudo /sbin/iptables -A PREROUTING  -t nat -p tcp -m tcp -i $1 --dport 8443 -j DNAT --to-destination 172.30.0.10:443
 /bin/sudo /sbin/iptables -I FORWARD     -i $1         -m state -p tcp -d 172.30.0.10 --dport 443 --state NEW,ESTABLISHED,RELATED -j ACCEPT
