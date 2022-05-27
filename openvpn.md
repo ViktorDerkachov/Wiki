@@ -280,3 +280,5 @@ cat ** /etc/sysconfig/iptables**
 COMMIT
 
 
+ip route add  10.100.0.0/16 via  10.100.238.145
+
