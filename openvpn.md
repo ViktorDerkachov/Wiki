@@ -295,4 +295,9 @@ root@ovpn2 client: cat up-actions
 /bin/sudo /sbin/ip route add  10.100.0.0/16 via $5
 
 
+**enabling daemons**
+
+systemctl enable openvpn-client@
+systemctl enable openvpn-server@
+
 
