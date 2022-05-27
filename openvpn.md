@@ -300,4 +300,5 @@ root@ovpn2 client: cat up-actions
 systemctl enable openvpn-client@
 systemctl enable openvpn-server@
 
-
+systemctl start openvpn-server@service
+systemctl start openvpn-client@service
