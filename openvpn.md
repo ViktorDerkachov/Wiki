@@ -232,7 +232,18 @@ log from server
 `check: systemctl status sysctl , iptables -L -v -n`
 
 
+# problem with ermission to start --up script
+
+less /etc/selinux/config 
+
+setenforce Permissive
 
 
-iptables -t nat -A POSTROUTING 
--o tun0 -j MASQUERADE
+up script:
+iptables -t nat -A POSTROUTING  -o $1 -j MASQUERADE
+
+down script:
+iptables -t nat -D POSTROUTING  -o $1 -j MASQUERADE
+
+to check:
+iptables -L -t nat -nv
