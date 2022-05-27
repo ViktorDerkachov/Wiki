@@ -280,5 +280,18 @@ cat ** /etc/sysconfig/iptables**
 COMMIT
 
 
-ip route add  10.100.0.0/16 via  10.100.238.145
+**# openvpn-client@service**
+root@ovpn2 client]# cat up-actions 
+#!/bin/sh
+# cmd tun_dev tun_mtu link_mtu ifconfig_local_ip ifconfig_remote_ip [ init | restart ]
+/bin/sudo /sbin/iptables -t nat -A POSTROUTING -o $1 -j MASQUERADE
+
+# publish some server
+
+/bin/sudo /sbin/iptables -A PREROUTING  -t nat -p tcp -m tcp -i $1 --dport 8443 -j DNAT --to-destination 172.30.0.10:443
+/bin/sudo /sbin/iptables -I FORWARD     -i $1         -m state -p tcp -d 172.30.0.10 --dport 443 --state NEW,ESTABLISHED,RELATED -j ACCEPT
+
+/bin/sudo /sbin/ip route add  10.100.0.0/16 via $5
+
+
 
