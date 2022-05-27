@@ -281,7 +281,9 @@ COMMIT
 
 
 **# openvpn-client@service**
-root@ovpn2 client]# cat up-actions 
+
+root@ovpn2 client: cat up-actions 
+
 #!/bin/sh
 /bin/sudo /sbin/iptables -t nat -A POSTROUTING -o $1 -j MASQUERADE
 
