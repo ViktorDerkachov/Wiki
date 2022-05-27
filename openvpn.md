@@ -283,7 +283,6 @@ COMMIT
 **# openvpn-client@service**
 root@ovpn2 client]# cat up-actions 
 #!/bin/sh
-# cmd tun_dev tun_mtu link_mtu ifconfig_local_ip ifconfig_remote_ip [ init | restart ]
 /bin/sudo /sbin/iptables -t nat -A POSTROUTING -o $1 -j MASQUERADE
 
 # publish some server
