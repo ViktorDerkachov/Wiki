@@ -220,3 +220,19 @@ log from server
 # Management Interface
 
 [Management Interface](https://openvpn.net/community-resources/management-interface/)
+
+## Openvpn client
+
+**Enable IP forwarding**
+
+`sysctl -w net.ipv4.ip_forward=1`
+
+`sysctl -p`
+
+`check: systemctl status sysctl , iptables -L -v -n`
+
+
+
+
+iptables -t nat -A POSTROUTING 
+-o tun0 -j MASQUERADE
