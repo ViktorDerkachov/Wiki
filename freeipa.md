@@ -83,3 +83,6 @@ ipa migrate-ds --user-container=cn=users,cn=accounts --group-container=cn=groups
 [Backup DNS Zones](https://lists.fedorahosted.org/archives/list/freeipa-users@lists.fedorahosted.org/thread/DPC5BELJXA6YIMJNG5GLKDNCDY6EI2UT/)
 
 [[Freeipa-users] Export DNS to external](https://listman.redhat.com/archives/freeipa-users/2014-January/msg00291.html)
+
+# Export
+[[Freeipa-users] Export user and host list to a csv or text file](https://freeipa-users.redhat.narkive.com/s8GMtC3S/export-user-and-host-list-to-a-csv-or-text-file)
