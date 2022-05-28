@@ -65,6 +65,7 @@ from here
 
 [How To Set Up and Configure an OpenVPN Server on CentOS 8](https://www.digitalocean.com/community/tutorials/how-to-configure-a-freeipa-client-on-ubuntu-16-04)
 
+# Detailed configuration^ server + client + config generation
 [How To Set Up and Configure an OpenVPN Server on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-ubuntu-22-04)
 
 [OpenVPN](https://wiki.archlinux.org/title/OpenVPN)
