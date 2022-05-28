@@ -9,3 +9,4 @@
 5) [SSH VPN Tunnel](https://habr.com/ru/post/331348/#t5)
 6) [Коротко о беспарольном доступе](https://habr.com/ru/post/331348/#t6)
 
+[SSH Essentials: Working with SSH Servers, Clients, and Keys](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys)
