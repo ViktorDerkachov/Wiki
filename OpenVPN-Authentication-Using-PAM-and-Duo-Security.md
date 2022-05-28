@@ -77,4 +77,10 @@ After reading those instructions, I updated the duo_openvpn plugin to optionally
 
 In the end, we decided that the user interface of these "composite passwords" is rather suboptimal: asking the user to enter their (hopefully complex) password (which we expect many users to have stored in 1Password and would have to copy from there), followed by a comma, followed by the Duo token seems prone to errors. Either way, the code is there, if you're interested.
 
+[jschauma / duo_openvpn](https://github.com/jschauma/duo_openvpn)
 
+having some trouble with openvpn using an auth plugin for DuoSecurity MFA.
+https://github.com/duosecurity/duo_openvpn
+[Discussion: [Openvpn-users] username-as-common-name not setting username as common_name for plugin](https://openvpn-users.narkive.com/MkNsB9Be/username-as-common-name-not-setting-username-as-common-name-for-plugin)
+
+[Integrating Duo 2FA with OpenVPN](https://www.netmeister.org/blog/duo-openvpn.html)
