@@ -29,6 +29,16 @@
 
 [V3/WebUI plugins](https://www.freeipa.org/page/V3/WebUI_plugins)
 
+# Modification certificate profiles for ipa 
+
+ipa certprofile-mod  OpenVPNUserCertMobile --file=/root/ipa-profiles/OpenVPNUserCertMobile.cfg --store=TRUE --desc="OpenVPN mobile user enrollment profile"
+in **OpenVPNUserCertMobile.cfg**:
+policyset.serverCertSet.7.default.params.exKeyUsageOIDs=1.3.6.1.5.5.7.3.2
+policyset.serverCertSet.1.default.params.name=CN=$request.req_subject_name.cn$, O=TUTON.CF, generationQualifier=mobile
+
+
+
+
 ## **Ammendment for certificate view to reflect generationQualifier attribute  in app.js**
 
 file app.js at /usr/share/ipa/ui/js/freeipa/
