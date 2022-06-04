@@ -6,3 +6,13 @@
 [How to Configure BIND9 as a Primary DNS Server on Ubuntu 20.04](https://serverspace.io/support/help/bind9-as-a-primary-dns-server-on-ubuntu/)
 
 [УСТАНОВКА И НАСТРОЙКА КЛИЕНТА INADYN ДЛЯ DYNDNS NOIP.COM](https://blackdiver.net/it/linux/491)
+
+# Настройка DNS для рекурсии
+
+[Recursive DNS and FreeIPA](https://adam.younglogic.com/2018/04/recursive-dns-and-freeipa/)
+
+/etc/named.conf
+options {
+        allow-recursion { any; };
+
+systemctl restart named-pkcs11
