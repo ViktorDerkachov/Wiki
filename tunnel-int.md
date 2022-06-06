@@ -13,6 +13,12 @@ nmcli connection modify tun10 ipv4.method manual
 nmcli connection modify tun10 +ipv4.routes "172.30.1.0/24 10.0.0.1"
 nmcli connection up tun10
 
+
+nmcli connection modify tun10 +ipv4.routes "10.150.0.0/16 10.0.0.1"
+nmcli connection modify tun10 +ipv4.routes "10.144.0.0/12 10.0.0.1"
+nmcli connection modify tun10 +ipv4.routes "10.128.0.0/12 10.0.0.1"
+nmcli connection modify tun10 +ipv4.routes "10.10.0.0/16 10.0.0.1"
+
 ipa2
 route add 172.16.0.0 255.240.0.0 gw 172.30.1.100
 
