@@ -97,6 +97,30 @@ ipa migrate-ds --user-container=cn=users,cn=accounts --group-container=cn=groups
 # Export
 [[Freeipa-users] Export user and host list to a csv or text file](https://freeipa-users.redhat.narkive.com/s8GMtC3S/export-user-and-host-list-to-a-csv-or-text-file)
 
+Forward zones
+
+[V4/Forward zones](https://www.freeipa.org/page/V4/Forward_zones)
+
+[Recursive DNS and FreeIPA](https://adam.younglogic.com/2018/04/recursive-dns-and-freeipa/)
+
+[FreeIPA (IdM) integrated DNS server denies recursive query from client networks](https://access.redhat.com/solutions/5753431)
+
+[freeipa DNS issues with resolving](https://lists.fedoraproject.org/archives/list/freeipa-users@lists.fedorahosted.org/thread/NP2LMUA4M54XAV2PRNTCGCTKFQKSQILD/)
+
+[Troubleshooting/DNS](https://www.freeipa.org/page/Troubleshooting/DNS)
+
+[Set allow-recursion by default in IPA DNS](https://pagure.io/freeipa/issue/1335)
+ "allow-recursion { any; };"
+
+[Is IPA's DNS working as a recursive DNS server for internal + external requests](https://lists.fedorahosted.org/archives/list/freeipa-users@lists.fedorahosted.org/thread/HEMQW24AW3JW6BDCINZDBIQ5BVONOVOU/)
+
+[IPA DNS DNSSEC causes Global Forwarding to not function](https://access.redhat.com/solutions/1400113)
+Edit /etc/named.conf 
+`dnssec-enable no;`
+`dnssec-validation no;`
+`# systemctl restart named-pkcs11`
+
+
 ## FreeIPA password 
 
 [FreeIPA self-service password reset](https://github.com/larrabee/freeipa-password-reset)
