@@ -96,3 +96,9 @@ ipa migrate-ds --user-container=cn=users,cn=accounts --group-container=cn=groups
 
 # Export
 [[Freeipa-users] Export user and host list to a csv or text file](https://freeipa-users.redhat.narkive.com/s8GMtC3S/export-user-and-host-list-to-a-csv-or-text-file)
+
+## FreeIPA password 
+
+[FreeIPA self-service password reset](https://github.com/larrabee/freeipa-password-reset)
+
+[change default freeipa settings for password change/expire and otp timeout](https://lists.fedorahosted.org/archives/list/freeipa-users@lists.fedorahosted.org/thread/RENDPMEIXUWFGI2IBFAAC6WBVKNZCI7P/)
