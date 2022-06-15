@@ -182,6 +182,29 @@ vi  /usr/share/pam-configs/mkhomedir
 `required pam_mkhomedir.so umask=0022 skel=/etc/skel`
 
 
+# Configuring System Authentication
+
+## Oracle make home dir
+
+[Configuring System Authentication](https://docs.oracle.com/cd/F22978_01/8/userauth/F21455.pdf)
+
+[Chapter 6. Enabling Custom Home Directories Using authconfig](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/authconfig-homedirs)
+
+Install the oddjob-mkhomedir package on the system.
+
+This package provides the pam_oddjob_mkhomedir.so library, which the authconfig command uses to create home directories. The pam_oddjob_mkhomedir.so library, unlike the default pam_mkhomedir.so library, can create SELinux labels.
+
+ls /usr/share/authselect/default/sssd/
+
+ls /lib64/security/pam_oddjob_mkhomedir.so
+
+authselect select sssd with-mkhomedir
+
+systemctl enable oddjobd.service
+
+
+
+
 # OCSP check
 
 openssl ocsp -CA ./ca.pem -issuer ./ca.pem  -nonce -serial 27  -url  http://ipa-ca.tuton.cf/ca/ocsp
