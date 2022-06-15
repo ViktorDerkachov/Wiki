@@ -9,7 +9,7 @@ Welcome to the freeipa wiki!
 [How To Install FreeIPA Server on CentOS 7](https://computingforgeeks.com/install-freeipa-server-centos-7/)
 
 
-# Oracle Linux 8.5 installation
+# Oracle Linux 8.5 - IPA installation 
 
 
 
