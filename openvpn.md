@@ -1,6 +1,17 @@
 ## OpenVPN Access Server system requirements
 [OpenVPN Access Server system requirements](https://openvpn.net/vpn-server-resources/openvpn-access-server-system-requirements/)
 
+On Red Hat Enterprise Linux 8, we advise you to remove the firewalld daemon
+
+Almost all modern CPUs support **AES-NI** to speed up AES processing.
+Access Server automatically uses AES-NI for the default AES-256 encryption. A  non-AES-NI CPU severely lowers the speed of the encryption/decryption process. As a very rough estimate, you should **quadruple** your estimates for CPU sizing if AES-NI is not supported on your intended deployment platform.
+As a rule of thumb, you should assume that on a modern CPU with an AES-NI chipset you need approximately** 12MHz for each megabit **per second (Mbps) transferred in one direction. Access Server can use all available CPU cores on a system, so for example a modern 4-core system at 3GHz would count as 12,000MHz, which equates to approximately 1,000Mbps maximum throughput.
+
+For more than 10 users, calculate your maximum expected bandwidth in Mbps and choose an instance type accordingly: T-series is usually fine if less than 200Mbps total, and C-series is better if you need more.
+
+going beyond the** C-series 2xlarge **type seems **pointless **because you would hit the bandwidth limit before you hit the CPU limit.
+
+
 
 # OpenVPN authentication against FreeIPA, SSSD
 
