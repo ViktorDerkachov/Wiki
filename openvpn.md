@@ -1,3 +1,7 @@
+## OpenVPN Access Server system requirements
+[OpenVPN Access Server system requirements](https://openvpn.net/vpn-server-resources/openvpn-access-server-system-requirements/)
+
+
 # OpenVPN authentication against FreeIPA, SSSD
 
 [OpenVPN authentication against FreeIPA, SSSD](https://forums.openvpn.net/viewtopic.php?t=23667)
