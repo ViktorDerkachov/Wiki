@@ -42,6 +42,7 @@ systemctl status chronyd
 chronyc sources -v
   
 hostnamectl set-hostname ipa2.tuton.cf
+
 vi /etc/hosts 
 
 yum module enable idm:DL1
@@ -49,6 +50,7 @@ yum module enable idm:DL1
 yum distro-sync
  
  // yum module install idm:DL1/server
+ // yum -y install @idm:client
 
 yum module install idm:DL1/dns
 
