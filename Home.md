@@ -194,13 +194,15 @@ Install the oddjob-mkhomedir package on the system.
 
 This package provides the pam_oddjob_mkhomedir.so library, which the authconfig command uses to create home directories. The pam_oddjob_mkhomedir.so library, unlike the default pam_mkhomedir.so library, can create SELinux labels.
 
-ls /usr/share/authselect/default/sssd/
+`ls /usr/share/authselect/default/sssd/`
 
-ls /lib64/security/pam_oddjob_mkhomedir.so
+`ls /lib64/security/pam_oddjob_mkhomedir.so`
 
-authselect select sssd with-mkhomedir
+`authselect current`
 
-systemctl enable oddjobd.service
+`authselect select sssd with-sudo with-mkhomedir`
+
+`systemctl enable oddjobd.service`
 
 
 
