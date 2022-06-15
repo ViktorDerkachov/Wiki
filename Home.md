@@ -130,6 +130,9 @@ https://pagure.io/freeipa/issue/9041
 `--domain computingforgeeks.com \`
 `--realm COMPUTINGFORGEEKS.COM`
 
+# How To Install FreeIPA Client on CentOS 8 / RHEL 8
+[How To Install FreeIPA Client on CentOS 8 / RHEL 8](https://computingforgeeks.com/how-to-install-freeipa-client-on-centos-rhel-8/)
+
 
 ## Ubuntu 20.04 client installation
 
