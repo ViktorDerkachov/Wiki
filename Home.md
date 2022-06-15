@@ -43,6 +43,7 @@ chronyc sources -v
   
 hostnamectl set-hostname ipa2.tuton.cf
 vi /etc/hosts 
+
 yum module enable idm:DL1
 
 yum distro-sync
