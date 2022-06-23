@@ -44,3 +44,11 @@ You pay $123.00 per month for Accelerated Site-to-Site VPN.
 
 AWS Client VPN endpoint association	$0.10 per hour
 AWS Client VPN connection	$0.05 per hour
+
+
+
+## AWS route tables
+[AWS Route Table Concepts and How Route Tables Work](https://blog.claydesk.com/aws-route-table-concepts/)
+
+[Configure route tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html#gateway-route-table-routes)
+
