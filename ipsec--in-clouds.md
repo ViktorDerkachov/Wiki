@@ -10,10 +10,15 @@ Simulating Site-to-Site VPN Customer Gateways Using strongSwan
 [Simulating Site-to-Site VPN Customer Gateways Using strongSwan](https://aws.amazon.com/blogs/networking-and-content-delivery/simulating-site-to-site-vpn-customer-gateways-strongswan/)
 
 [sysctl-explorer: disable_policy](https://sysctl-explorer.net/net/ipv4/disable_policy/)
+
 **disable_policy**
+
 file: /proc/sys/net/ipv4/conf/interface/disable_policy
+
 variable: net.ipv4.conf.interface.disable_policy
+
 Official reference
+
 Disable IPSEC policy (SPD) for this interface
 
 Nb: per interface setting (where “interface” is the name of your network interface); “all” is a special interface: changes the settings for all interfaces.
