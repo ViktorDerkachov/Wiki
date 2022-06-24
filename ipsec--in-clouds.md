@@ -1,6 +1,11 @@
 
-AWS Site-to-Site VPN with IPSec VPN (Strongwan) and BGP (FRRouting)
+# ## AWS Site-to-Site VPN with IPSec VPN (Strongwan) and BGP (FRRouting)
 [AWS Site-to-Site VPN with IPSec VPN (Strongwan) and BGP (FRRouting)](https://www.edge-cloud.net/2019/07/18/aws-site-2-site-vpn-with-strongswan-frrouting/#)
+
+strongSwan:KEv1 Cipher Suites
+[KEv1 Cipher Suites](https://wiki.strongswan.org/projects/strongswan/wiki/IKEv1CipherSuites)
+
+[Creating Site-To-Site VPN between StrongSwan and Amazon AWS Virtual Private Gateway](https://geekdudes.wordpress.com/2019/01/30/creating-site-to-site-vpn-between-strongswan-and-amazon-aws-virtual-private-gateway/)
 
 Simulating Site-to-Site VPN Customer Gateways Using strongSwan
 [Simulating Site-to-Site VPN Customer Gateways Using strongSwan](https://aws.amazon.com/blogs/networking-and-content-delivery/simulating-site-to-site-vpn-customer-gateways-strongswan/)
