@@ -1,0 +1,2 @@
+Настройки sysctl.conf для усиление безопасности в Linux
+[Настройки sysctl.conf для усиление безопасности в Linux](https://g-soft.info/articles/2387/nastroyki-sysctl-conf-dlya-usilenie-bezopasnosti-v-linux/)
