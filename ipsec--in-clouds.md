@@ -36,6 +36,9 @@ RED HAT : Libreswan as an IPsec VPN implementation
 Oracle Cloud Infrastructure Documentation : Libreswan
 [Libreswan](https://docs.oracle.com/en-us/iaas/Content/Network/Reference/libreswanCPE.htm)
 
+# Route-based VPN
+[Route-based VPN](https://docs.strongswan.org/docs/5.9/features/routeBasedVpn.html)
+
 
 Oracle Linux
 Configuring Virtual Private Networks : wireguard IPSEC
