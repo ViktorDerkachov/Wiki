@@ -1,5 +1,4 @@
 
-# ## AWS Site-to-Site VPN with IPSec VPN (Strongwan) and BGP (FRRouting)
 [AWS Site-to-Site VPN with IPSec VPN (Strongwan) and BGP (FRRouting)](https://www.edge-cloud.net/2019/07/18/aws-site-2-site-vpn-with-strongswan-frrouting/#)
 
 strongSwan:KEv1 Cipher Suites
