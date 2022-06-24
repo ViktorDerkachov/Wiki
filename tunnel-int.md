@@ -26,3 +26,8 @@ Chapter 16. Configuring IP tunnels
 
 [Chapter 16. Configuring IP tunnels](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/configuring-ip-tunnels_configuring-and-managing-networking)
 
+
+# An introduction to Linux virtual interfaces: Tunnels
+[An introduction to Linux virtual interfaces: Tunnels](https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels#)
+
+[How to create VTI interface for IPsec Site-To-Site in OpenWrt?](https://forum.openwrt.org/t/solved-how-to-create-vti-interface-for-ipsec-site-to-site-in-openwrt/67981?page=2)
