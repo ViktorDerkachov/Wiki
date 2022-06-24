@@ -1,4 +1,4 @@
-
+# strongswan
 [AWS Site-to-Site VPN with IPSec VPN (Strongwan) and BGP (FRRouting)](https://www.edge-cloud.net/2019/07/18/aws-site-2-site-vpn-with-strongswan-frrouting/#)
 
 strongSwan:KEv1 Cipher Suites
@@ -8,6 +8,18 @@ strongSwan:KEv1 Cipher Suites
 
 Simulating Site-to-Site VPN Customer Gateways Using strongSwan
 [Simulating Site-to-Site VPN Customer Gateways Using strongSwan](https://aws.amazon.com/blogs/networking-and-content-delivery/simulating-site-to-site-vpn-customer-gateways-strongswan/)
+
+[sysctl-explorer: disable_policy](https://sysctl-explorer.net/net/ipv4/disable_policy/)
+**disable_policy**
+file: /proc/sys/net/ipv4/conf/interface/disable_policy
+variable: net.ipv4.conf.interface.disable_policy
+Official reference
+Disable IPSEC policy (SPD) for this interface
+
+Nb: per interface setting (where “interface” is the name of your network interface); “all” is a special interface: changes the settings for all interfaces.
+
+
+[Re: [strongSwan] IPSec route based VPN - VTI interface TX Errors NoRoute](https://www.mail-archive.com/users@lists.strongswan.org/msg16427.html)
 
 [What is the IPsec bottleneck in Linux?](https://unix.stackexchange.com/questions/192395/what-is-the-ipsec-bottleneck-in-linux)
 
