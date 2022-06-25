@@ -126,3 +126,9 @@ Edit /etc/named.conf
 [FreeIPA self-service password reset](https://github.com/larrabee/freeipa-password-reset)
 
 [change default freeipa settings for password change/expire and otp timeout](https://lists.fedorahosted.org/archives/list/freeipa-users@lists.fedorahosted.org/thread/RENDPMEIXUWFGI2IBFAAC6WBVKNZCI7P/)
+
+
+# Web App Authentication
+[Web App Authentication](https://www.freeipa.org/page/Web_App_Authentication#SAML)
+[Web App Authentication/Namespace separation](https://www.freeipa.org/page/Web_App_Authentication/Namespace_separation)
+
