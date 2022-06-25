@@ -1,3 +1,5 @@
+[Amazon EC2 On-Demand Pricing](https://aws.amazon.com/ec2/pricing/on-demand/)
+
 [AWS VPN pricing](https://aws.amazon.com/vpn/pricing/)
 
 **0.05 per Site-to-Site VPN connection per hour**
