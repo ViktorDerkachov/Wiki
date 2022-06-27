@@ -90,6 +90,9 @@ The ipa-server-upgrade command was successful
 after ipa-server upgrade  i've got
 free ipa update initializing DST: PKCS#11 initialization failed
 
+have a look at This is in this directory : /var/lib/dirsrv/slapd-DIGITALREASONING-COM/
+
+
 что-то похожее:
 [#5104 F20-F21 update and crashing bind-pkcs11](https://pagure.io/freeipa/issue/5104)
 [[Freeipa-users] named-pkcs11 doesn't start after bind update](https://www.mail-archive.com/freeipa-users@redhat.com/msg23018.html)
