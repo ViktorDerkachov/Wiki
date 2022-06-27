@@ -79,4 +79,32 @@ The IPA services were upgraded
 The ipa-server-upgrade command was successful
 [root@ipa2 ~]# 
 
+
 [Upgrade](https://www.freeipa.org/page/Upgrade)
+
+
+## Recovery
+
+`[root@ipa2 ~]# cat  /etc/sysconfig/named `
+
+`# BIND named process options`
+`# ~~~~~~~~~~~~~~~~~~~~~~~~~~`
+`#`
+`# OPTIONS="whatever"     --  These additional options will be passed to named`
+`#                            at startup. Don't add -t here, enable proper`
+`#                            -chroot.service unit file.`
+`#`
+`# NAMEDCONF=/etc/named/alternate.conf`
+`#                        --  Don't use -c to change configuration file.`
+`#                            Extend systemd named.service instead or use this`
+`#                            variable.`
+`#`
+`# DISABLE_ZONE_CHECKING  --  By default, service file calls named-checkzone`
+`#                            utility for every zone to ensure all zones are`
+`#                            valid before named starts. If you set this option`
+`#                            to 'yes' then service file doesn't perform those`
+`#                            checks.`
+`SOFTHSM2_CONF=/etc/ipa/dnssec/softhsm2.conf`
+`**OPTIONS="-E libsofthsm2.so"**`
+
+
