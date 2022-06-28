@@ -154,7 +154,7 @@ vi /etc/systemd/resolved.conf
 
 `FallbackDNS=8.8.8.8 8.8.4.4 1.1.1.1 1.0.0.1`
 
-
+systemctl restart systemd-resolved
 
 yum -y update
 
