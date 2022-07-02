@@ -16,3 +16,13 @@ options {
         allow-recursion { any; };
 
 systemctl restart named-pkcs11
+
+
+## views in BIND 9
+
+[Understanding views in BIND 9, with examples](https://kb.isc.org/docs/aa-00851)
+
+
+
+
+
