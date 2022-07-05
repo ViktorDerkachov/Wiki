@@ -220,3 +220,30 @@ openssl ocsp -CA ./ca.pem -issuer ./ca.pem  -nonce -serial 27  -url  http://ipa-
 
 [Signer certificate for OCSP responder](https://forums.openvpn.net/viewtopic.php?t=25307)
 
+
+## LDAP
+[HowTo/LDAP](https://www.freeipa.org/page/HowTo/LDAP)
+
+System Accounts
+There are some LDAP clients that need a pre-configured account. Some examples are the LDAP autofs client and sudo. Using a user's credentials is generally preferable to creating a shared system account but that is not always possible. Do not use the Directory Manager account to authenticate remote services to the IPA LDAP server. Use a system account, created like this:.
+
+# ldapmodify -x -D 'cn=Directory Manager' -W
+dn: uid=system,cn=sysaccounts,cn=etc,dc=example,dc=com
+changetype: add
+objectclass: account
+objectclass: simplesecurityobject
+uid: system
+userPassword: secret123
+passwordExpirationTime: 20380119031407Z
+nsIdleTimeout: 0
+<blank line>
+^D
+Be sure to change the password to something more secure, and the uid to something reasonable.
+
+The reason to use an account like this rather than creating a normal user account in IPA and using that is that the system account exists only for binding to LDAP. It is not a real POSIX user, can't log into any systems and doesn't own any files.
+
+This use also has no special rights and is unable to write any data in the IPA LDAP server, only read.
+
+Note: IPA 4.0 is going to change the default stance on data from nearly everything is readable to nothing is readable, by default. You will eventually need to add some Access Control Instructions (ACI's) to grant read access to the parts of the LDAP tree you will need.
+
+
