@@ -133,7 +133,7 @@ Edit /etc/named.conf
 [Web App Authentication/Namespace separation](https://www.freeipa.org/page/Web_App_Authentication/Namespace_separation)
 
 
-## DNS Autodiscovery
+# DNS Autodiscovery
 
 [Explain how autodiscovery works in ipa-client-install man pages](https://bugzilla.redhat.com/show_bug.cgi?id=910546)
  DNS Autodiscovery
@@ -159,3 +159,53 @@ Edit /etc/named.conf
 [For FreeIPA autodiscovery to work, what SRV records must exist on the DNS server?](https://serverfault.com/questions/996099/for-freeipa-autodiscovery-to-work-what-srv-records-must-exist-on-the-dns-server)
 
 ipa dns-update-system-records --dry-run
+
+
+When ipa-server is setup with embedded DNS (using --setup-dns ) SRV
+records are automatically added in IPA.
+
+If its external DNS server, You need to add records something like
+this in your DNS server.
+
+
+[configuration on the High Availability of the FreeIPA](https://lists.fedorahosted.org/archives/list/freeipa-users@lists.fedorahosted.org/thread/3DPXWDIZ3EKIN46YECXIMWLOI2BZZESV/)
+
+[_ldap._tcp.example.com](http://_ldap._tcp.example.com/). 86400 IN SRV 0 100 389
+[ipaserver1.example.com](http://ipaserver1.example.com/).
+[_kerberos._tcp.example.com](http://_kerberos._tcp.example.com/). 86400 IN SRV 0 100 88 [ipaserver1.example.com](http://ipaserver1.example.com/).
+[_kerberos._udp.example.com](http://_kerberos._udp.example.com/). 86400 IN SRV 0 100 88 [ipaserver1.example.com](http://ipaserver1.example.com/).
+[_kpasswd._tcp.example.com](http://_kpasswd._tcp.example.com/). 86400 IN SRV 0 100 464
+[ipaserver1.example.com](http://ipaserver1.example.com/).
+[_kpasswd._udp.example.com](http://_kpasswd._udp.example.com/). 86400 IN SRV 0 100 464
+[ipaserver1.example.com](http://ipaserver1.example.com/).
+
+After this client will auto discover IPA server which is providing
+LDAP & Kerberos information.
+
+
+Try to run below commands on your IPA client & point resolv.conf to
+IPA server & IPA client
+
+# dig srv [_ldap._tcp.dataservice.net](http://_ldap._tcp.dataservice.net/)
+# dig srv [_kerberos._tcp.dataservice.net](http://_kerberos._tcp.dataservice.net/)
+# dig srv [_kpasswd._tcp.dataservice.net](http://_kpasswd._tcp.dataservice.net/)
+
+
+If they return your IPA servers, It can automatically figure out your
+IPA servers using DNS resolver
+
+so we can safely ignore the --server option for the ipa-client-install? but
+the --domain and --realm are mandatory?
+I am sorry, I am not sure but if your client hostname is within
+correct domain, I think you dont need to give domain & realm.
+
+High availability of infrastructure services
+[Replicate your identity management](https://www.adelton.com/docs/idm/replicate-your-identity-management-text.pdf)
+
+ipa topologysegment-find ca
+
+[domain/example.com]
+ipa_server = ipa1.example.com, ipa2.example.com, _srv_
+
+
+
