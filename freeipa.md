@@ -132,3 +132,30 @@ Edit /etc/named.conf
 [Web App Authentication](https://www.freeipa.org/page/Web_App_Authentication#SAML)
 [Web App Authentication/Namespace separation](https://www.freeipa.org/page/Web_App_Authentication/Namespace_separation)
 
+
+## DNS Autodiscovery
+
+[Explain how autodiscovery works in ipa-client-install man pages](https://bugzilla.redhat.com/show_bug.cgi?id=910546)
+ DNS Autodiscovery
+       Client  installer  by  default  tries to search for _ldap._tcp.DOMAIN DNS SRV records for all
+       domains that are parent to its hostname. For example, if a  client  machine  has  a  hostname
+       'client1.lab.example.com',  the  installer  will  try to retrieve an IPA server hostname from
+       _ldap._tcp.lab.example.com,  _ldap._tcp.example.com  and  _ldap._tcp.com  DNS  SRV   records,
+       respectively.  The  discovered  domain is then used to configure client components (e.g. SSSD
+       and Kerberos 5 configuration) on the machine.
+
+       When the client machine hostname is not in a subdomain of an IPA server, its  domain  can  be
+       passed  with --domain option. In that case, both SSSD and Kerberos components have the domain
+       set in the configuration files and will use it to autodiscover IPA servers.
+
+       Client machine can also be configured without a DNS autodiscovery at all. When both  --server
+       and  --domain  options  are  used,  client installer will use the specified server and domain
+       directly. --server option accepts multiple server hostnames which can be  used  for  failover
+       mechanism.  Without  DNS  autodiscovery,  Kerberos is configured with a fixed list of KDC and
+       Admin servers. SSSD is still configured to either try to read domain's  SRV  records  or  the
+       specified  fixed list of servers. When --fixed-primary option is specified, SSSD will not try
+       to read DNS SRV record at all (see sssd-ipa(5) for details).
+
+[For FreeIPA autodiscovery to work, what SRV records must exist on the DNS server?](https://serverfault.com/questions/996099/for-freeipa-autodiscovery-to-work-what-srv-records-must-exist-on-the-dns-server)
+
+ipa dns-update-system-records --dry-run
