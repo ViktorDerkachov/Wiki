@@ -64,6 +64,11 @@ ipa-server-install
 
  klist 
 
+
+## kra installation:
+
+ipa-kra-install
+
 --------------------------------------------------------------------  
 less /var/log/ipaserver-install.log
  systemctl start ipa.service
