@@ -253,4 +253,8 @@ This use also has no special rights and is unable to write any data in the IPA L
 
 Note: IPA 4.0 is going to change the default stance on data from nearly everything is readable to nothing is readable, by default. You will eventually need to add some Access Control Instructions (ACI's) to grant read access to the parts of the LDAP tree you will need.
 
+## NTP issue
+
+[V4/ntpd deprecation/chronyd support](https://www.freeipa.org/page/V4/ntpd_deprecation/chronyd_support)
+
 
