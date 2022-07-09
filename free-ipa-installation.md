@@ -14,6 +14,7 @@ Welcome to the freeipa wiki!
 
 
 yum install net-tools
+//yum install bind-utils
   
 // yum -y install epel-release
 
