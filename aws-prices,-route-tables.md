@@ -60,9 +60,24 @@ AWS Client VPN connection	$0.05 per hour
 
 [AWS VPC Endpoints](https://www.youtube.com/watch?v=6QS9YFGu5WI)
 
+**Gateway Endpoint**
+
 ![image](https://user-images.githubusercontent.com/103827443/178102065-d418d32a-48dc-4870-95de-5e6d6c4a7f98.png)
 
 ![image](https://user-images.githubusercontent.com/103827443/178102239-2a230806-7948-42d2-b8ab-964bfc855488.png)
+
+**Interface Endpoint**
+
+![image](https://user-images.githubusercontent.com/103827443/178102413-cbd2fa29-59db-4289-ae65-ff6ca630d75b.png)
+
+![image](https://user-images.githubusercontent.com/103827443/178102468-e4fb60bf-59dd-4f15-800c-32b9e2367c37.png)
+
+![image](https://user-images.githubusercontent.com/103827443/178102500-1d75f810-875b-46ab-856b-4e4a8bacad8c.png)
+
+**Private Link  vs VPC Peering**
+
+![image](https://user-images.githubusercontent.com/103827443/178102534-aec97a94-f483-4981-8120-9eb05f6713a6.png)
+
 
 
 
