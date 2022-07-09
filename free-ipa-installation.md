@@ -53,6 +53,7 @@ yum distro-sync
  // yum -y install @idm:client
 
 yum module install idm:DL1/dns
+// # yum module install idm:DL1/{dns,adtrust}
 
 ipa-server-install 
 
