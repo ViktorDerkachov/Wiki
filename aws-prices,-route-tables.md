@@ -54,3 +54,8 @@ AWS Client VPN connection	$0.05 per hour
 
 [Configure route tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html#gateway-route-table-routes)
 
+
+AWS Private Link , VPC EndPoints
+[AWS PrivateLink | VPC Endpoint Service | Demo](https://www.youtube.com/watch?v=0bHXWIM4_0o&t=864s)
+
+[AWS VPC Endpoints](https://www.youtube.com/watch?v=6QS9YFGu5WI)
