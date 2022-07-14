@@ -9,20 +9,22 @@ Welcome to the freeipa wiki!
 [How To Install FreeIPA Server on CentOS 7](https://computingforgeeks.com/install-freeipa-server-centos-7/)
 
 
-# Oracle Linux 8.5 - IPA installation 
-
-
-
-yum install net-tools
-//yum install bind-utils
-  
-// yum -y install epel-release
+# Oracle Linux 8.6 - IPA installation 
 
 localectl set-locale LANG=en_US.UTF-8
 
 yum install langpacks-en glibc-all-langpacks
    
 yum update -y
+
+yum install net-tools
+
+//yum install bind-utils
+  
+// yum -y install epel-release
+
+
+
 
 [Configure the time for EC2 instances with IPv4 addresses](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/set-time.html)
 
@@ -51,9 +53,11 @@ yum module enable idm:DL1
 yum distro-sync
  
  // yum module install idm:DL1/server
+
  // yum -y install @idm:client
 
 yum module install idm:DL1/dns
+
 // # yum module install idm:DL1/{dns,adtrust}
 
 ipa-server-install 
