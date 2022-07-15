@@ -1,4 +1,5 @@
 [root@ipa2 ~]# history 
+
     1  less /etc/resolv.conf 
     2  localectl set-locale LANG=en_US.UTF-8
     3  yum install langpacks-en glibc-all-langpacks
@@ -10,7 +11,7 @@
     9  vi  /etc/chrony.conf
    10  systemctl restart chronyd
    11  chronyc sources -v
-   12  hostnamectl set-hostname ipa1.core.idenon.com
+   12  hostnamectl set-hostname  --static  ipa1.core.idenon.com
    13  vi /etc/hosts 
    14  yum module enable idm:DL1
    15  yum distro-sync
@@ -100,6 +101,7 @@
    99  ipa-replica-manage list
   100  exit
   101  history 
+
 
 
 
